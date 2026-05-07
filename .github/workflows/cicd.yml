@@ -26,8 +26,8 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t Mariamfrm/devops-flask-app:latest .
+        docker build -t mariamfrm/devops-flask-app:latest .
 
     - name: Push Docker image
       run: |
-        docker push Mariamfrm/devops-flask-app:latest
+        docker push mariamfrm/devops-flask-app:latest
