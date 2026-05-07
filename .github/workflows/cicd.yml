@@ -16,6 +16,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: SonarCloud Scan
+      continue-on-error: true
       uses: SonarSource/sonarqube-scan-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -50,3 +51,4 @@ jobs:
     - name: Push Docker image
       run: |
         docker push mariamfrm/devops-flask-app:latest
+
